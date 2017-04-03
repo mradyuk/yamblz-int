@@ -1,0 +1,43 @@
+div#container {
+
+}
+
+div#footer {
+
+}
+
+div#school-div {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+
+}
+
+div#school-div-1 {
+    float: left;
+    width: 150px;
+    border-radius: 10px;
+    border: solid red;
+    background-color: red;
+    text-align: center;
+
+}
+
+div#school-div-2 {
+    margin: 0 auto;
+    width: 150px;
+    border-radius: 10px;
+    border: solid yellow;
+    background-color: yellow;
+    text-align: center;
+}
+
+div#school-div-3 {
+    float: right;
+    width: 150px;
+    border-radius: 10px;
+    border: solid plum;
+    background-color: plum;
+    text-align: center;
+}
