@@ -12,7 +12,10 @@ div {
 
 div#container {
     width: 75%;
+    min-width: 480px;
     /*left: 50%;*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     margin: auto;
 }
 
