@@ -1,6 +1,6 @@
 body {
     background-color: #ebebeb;
-    font-family: OpenSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: OpenSans, Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
     color: #373a3c;
@@ -29,7 +29,33 @@ div.title-box {
 }
 
 div.author-box{
-    color: #b3b3b3;
+    /*color: #b3b3b3;*/
+}
+
+/* Hover tooltips */
+.author-tip {
+    position:relative;
+    cursor:help;
+}
+.author-tip .author-info {
+    position:absolute;
+    top:-10px;
+    right:9999px;
+    width:200px;
+    margin-right:-220px; /* width + left/right padding */
+    padding:10px;
+    color: #373a3c;
+    background:#ebebeb;
+
+    -webkit-box-shadow:2px 2px 5px #ebebeb;
+    -moz-box-shadow:2px 2px 5px #ebebeb;
+    box-shadow:2px 2px 5px #ebebeb;
+    opacity:0;
+  }
+
+.author-tip:hover .author-info {
+    right:-20px;
+    opacity:1;
 }
 
 div.date-time-box{
@@ -46,6 +72,15 @@ div.date-box{
 
 div.time-box{
 
+}
+
+div.room-box{
+    color: #b3b3b3;
+}
+
+div.school-box{
+    display: flex;
+    flex-direction: column;
 }
 
 div.month-div{
