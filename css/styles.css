@@ -1,3 +1,46 @@
+@media(max-width: 800px) {
+    div.lecture-box {
+        font-size: 0.625rem;
+        margin: 0 5px 0 12px;
+    }
+
+    div.author-box {
+        font-size: 0.8125rem;
+    }
+    div.room-box{
+        font-size: 0.625rem;
+    }
+
+    div.completed > div.school-box {
+        display: none;
+    }
+
+    div.completed > div.school-id {
+        display: none;
+    }
+
+    div.lecture-button-box {
+        font-size: 0.8125rem;
+        margin: 30px 0 0 0px;
+        padding: 5px 10px 5px 10px;
+    }
+    a.link-button{
+        max-width: 60px;
+    }
+
+    div.school-box {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.625rem;
+        margin: 30px 0 0 0;
+    }
+
+
+    div.date-time-box {
+    }
+
+}
+
 body {
     background-color: #ebebeb;
     font-family: OpenSans, Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -6,71 +49,39 @@ body {
     color: #373a3c;
 }
 
-div {
-    display: block;
-}
-
 div#container {
-    width: 75%;
-    min-width: 480px;
-    /*left: 50%;*/
-    -webkit-box-sizing: border-box;
+
+    max-width: 70%;
+    min-width: 360px;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     margin: auto;
 }
 
-div#school-div {
-    text-align: center;
-    width: 75%;
-    margin: auto;
-    padding: 10px;
-}
-
-div#school-div-1 {
-    float: left;
-    width: 200px;
-    border-radius: 10px;
-    border: solid red;
-    text-align: center;
-}
-
-div#school-div-2 {
-    margin: 0 auto;
-    width: 200px;
-    border-radius: 10px;
-    border: solid yellow;
-    text-align: center;
-}
-
-div#school-div-3 {
-    float: right;
-    width: 200px;
-    border-radius: 10px;
-    border: solid plum;
-    text-align: center;
-}
-
-div.horizontal-box {
+.horizontal-box {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     background-color: white;
     border: 1px solid #dcdcdc;
     margin-bottom: 10px;
     padding: 10px;
     min-height: 120px;
-
+}
+.completed {
+    border: 1px solid #00cea0;
 }
 
-div.lecture-box {
+.lecture-box {
     margin: 0 30px 0 30px;
+}
+
+.title-box {
 
 }
 
-div.title-box {
-
-}
-
-div.author-box {
+.author-box {
     /*color: #b3b3b3;*/
 }
 
@@ -78,6 +89,7 @@ div.author-box {
 .author-tip {
     position: relative;
     cursor: help;
+    white-space: nowrap;
 }
 
 .author-tip .author-info {
@@ -90,11 +102,11 @@ div.author-box {
     color: #373a3c;
     background: #ebebeb;
     font-size: 0.8333rem;
-
     -webkit-box-shadow: 2px 2px 5px #ebebeb;
     -moz-box-shadow: 2px 2px 5px #ebebeb;
     box-shadow: 2px 2px 5px #ebebeb;
     opacity: 0;
+    word-wrap: break-word;
 }
 
 .author-tip:hover .author-info {
@@ -102,32 +114,65 @@ div.author-box {
     opacity: 1;
 }
 
-div.date-time-box {
+.date-time-box {
     display: flex;
+    width: 80px;
     flex-direction: column;
     margin: 30px 0 0 0;
 }
 
-div.date-box {
+.date-box {
 
 }
 
-div.time-box {
+.time-box {
 
 }
 
-div.room-box {
+.room-box {
     color: #b3b3b3;
 }
 
-div.school-box {
+.completed-icon-box {
+    width: 32px;
+    height: 32px;
+}
+
+.fa-check-circle {
+    color: #00cea0;
+}
+
+.lecture-button-box {
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
     font-size: 0.8333rem;
+    margin: 30px 0 0 50px;
+}
+
+.link-button {
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    opacity: 1;
+    filter: none;
+    text-decoration: none;
+    min-width: 70px;
+    padding: 10px 20px;
+    border: 1px solid #7e778b;
+    color: #7e778b;
+    background-color: transparent;
+}
+
+.school-box {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8125rem;
     margin: 30px 0 0 0;
 }
 
-div.school-id {
+.school-id {
     width: 100%;
     border-radius: 5px;
     text-align: center;
@@ -149,7 +194,7 @@ div.school-id {
     margin: 0 0 4px 0;
 }
 
-div.month-div {
+.month-div {
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -160,7 +205,7 @@ div.month-div {
     border-top: 3px #dc0000 solid;
 }
 
-div.month-div span {
+.month-div span {
     position: relative;
     display: inline-block;
     padding: 0 20px;
@@ -168,6 +213,34 @@ div.month-div span {
     background-color: #ebebeb;
 }
 
-div#footer {
+#footer {
+
+}
+
+.video-box {
+
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0 0 0;
+
+}
+
+.author-info-box {
+
+    display: flex;
+    width: 20%;
+    flex-direction: row;
+    margin: 30px 0 0 0;
+
+}
+.leture-info-box{
+
+}
+
+.details-box {
+
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0 0 0;
 
 }
