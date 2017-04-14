@@ -11,15 +11,33 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
 
 </head>
-<body>
+<body >
 <!--h1>Lectures timetable</h1-->
+<div class="search">
+    <select id="filter" l>
+        <option value="school" selected>Школа</option>
+        <option value="author">Лектор</option>
+    </select>
+    <!--select id="school-list">
+        <option value="interface" selected>Школа разработки интерфейсов</option>
+        <option value="mobile">Школа мобильной разработки</option>
+        <option value="design">Школа мобильного дизайна</option>
+    </select>
+    <select id="author-list" hidden>
+        <option value="1" selected>Максим Васильев</option>
+        <option value="2">Дмитрий Душкин</option>
+    </select-->
+    <input type="text" id="filter-val">
+
+    <input type="submit" onclick="filter()" value="Поиск">
+</div>
 
 <div id="container">
 
 
     <div class="month-div"><span>April, 2017</span></div>
 
-    <div class="horizontal-box completed">
+    <div name="lecture" class="horizontal-box completed">
 
         <div class="date-time-box">
             <div class="completed-icon-box">
@@ -30,29 +48,27 @@
         <div class="lecture-box">
             <div class="title-box">
                 <h2>
-                    Лекция 3. Мультимедиа: возможности браузера
+                    Лекция 1. Адаптивная верстка
                 </h2>
             </div>
             <div class="author-box">
-                <span class="author-tip">Максим Васильев
-                        <span class="author-info"><h4>Максим Васильев</h4>
+                <span class="author-tip" name="author">Дмитрий Душкин
+                        <span class="author-info"><h4>Дмитрий Душкин</h4>
                             Во фронтенд-разработке с 2007 года.
                             До 2013-го, когда пришёл в Яндекс, работал технологом в студии Лебедева и других компаниях.</span>
                 </span>
-
-
             </div>
         </div>
-        <div class="school-box">
-            <div class="school-id school1">Школа разработки интерфейсов</div>
-            <div class="school-id school3">Школа мобильного дизайна</div>
+        <div class="school-box" name="school">
+            <div class="school-id interface">Школа разработки интерфейсов</div>
+            <div class="school-id design">Школа мобильного дизайна</div>
         </div>
         <div class="lecture-button-box">
             <a href="lecture.html" class="link-button">Смотреть</a>
         </div>
     </div>
 
-    <div class="horizontal-box">
+    <div name="lecture" class="horizontal-box">
 
         <div class="date-time-box">
             <div class="date-box">Пн,10</div>
@@ -62,23 +78,22 @@
         <div class="lecture-box">
             <div class="title-box">
                 <h2>
-                    Лекция 3. Мультимедиа: возможности браузера
+                    Лекция 2. Мультимедиа: возможности браузера
                 </h2>
             </div>
             <div class="author-box">
-                <span class="author-tip">Максим Васильев
+                <span class="author-tip" name="author">Максим Васильев
                     <span class="author-info"><b>Максим Васильев</b>
                      Во фронтенд-разработке с 2007 года. До 2013-го, когда пришёл в Яндекс, работал технологом в студии Лебедева и других компаниях.</span>
                 </span>
             </div>
         </div>
-        <div class="school-box">
-            <div class="school-id school1">Школа разработки интерфейсов</div>
-
+        <div class="school-box" name="school">
+            <div class="school-id interface">Школа разработки интерфейсов</div>
         </div>
     </div>
 
-    <div class="horizontal-box">
+    <div name="lecture" class="horizontal-box">
 
         <div class="date-time-box">
             <div class="date-box">Bт,10</div>
@@ -88,26 +103,26 @@
         <div class="lecture-box">
             <div class="title-box">
                 <h2>
-                    Лекция 3. Мультимедиа: возможности браузера
+                    Лекция 3. Работа с сенсорным пользовательским вводом
                 </h2>
             </div>
             <div class="author-box">
-                <span class="author-tip">Максим Васильев
-                    <span class="author-info"><h4>Максим Васильев</h4>
+                <span class="author-tip" name="author">Дмитрий Душкин
+                    <span class="author-info"><h4>Дмитрий Душкин</h4>
                      Во фронтенд-разработке с 2007 года. До 2013-го, когда пришёл в Яндекс, работал технологом в студии Лебедева и других компаниях.</span>
                 </span>
             </div>
         </div>
-        <div class="school-box">
-            <div class="school-id school1">Школа разработки интерфейсов</div>
-            <div class="school-id school2">Школа мобильной разработки</div>
+        <div class="school-box" name="school">
+            <div class="school-id interface">Школа разработки интерфейсов</div>
+            <div class="school-id mobile">Школа мобильной разработки</div>
         </div>
     </div>
 
 
     <div class="month-div"><span>May, 2017</span></div>
 
-    <div class="horizontal-box">
+    <div name="lecture" class="horizontal-box">
 
         <div class="date-time-box">
             <div class="date-box">Пн,10</div>
@@ -116,16 +131,21 @@
         <div class="lecture-box">
             <div class="title-box">
                 <h2>
-                    Лекция 3. Мультимедиа: возможности браузера
+                    Лекция 4. Особенности проектирования мобильных интерфейсов
                 </h2>
             </div>
             <div class="author-box">
-                <span>Максим Васильев</span>
+                <span class="author-tip" name="author">Васюнин Николай
+                    <span class="author-info"><h4>Васюнин Николай</h4>
+                     Во фронтенд-разработке с 2007 года. До 2013-го, когда пришёл в Яндекс, работал технологом в студии Лебедева и других компаниях.</span>
+                </span>
             </div>
         </div>
-
+        <div class="school-box" name="school">
+            <div class="school-id interface">Школа разработки интерфейсов</div>
+        </div>
     </div>
-    <div class="horizontal-box">
+    <div name="lecture" class="horizontal-box">
 
         <div class="date-time-box">
             <div class="date-box">Пн,10</div>
@@ -134,16 +154,22 @@
         <div class="lecture-box">
             <div class="title-box">
                 <h2>
-                    Лекция 3. Мультимедиа: возможности браузера
+                    Лекция 5. Продукт и платформа
                 </h2>
             </div>
             <div class="author-box">
-                <span>Максим Васильев</span>
+                <span class="author-tip" name="author">Сергей Калабин
+                    <span class="author-info"><h4>Сергей Калабин</h4>
+                     Во фронтенд-разработке с 2007 года. До 2013-го, когда пришёл в Яндекс, работал технологом в студии Лебедева и других компаниях.</span>
+                </span>
             </div>
         </div>
-
+            <div class="school-box" name="school">
+                <div class="school-id interface">Школа разработки интерфейсов</div>
+                <div class="school-id design">Школа мобильного дизайна</div>
+            </div>
     </div>
-    <div class="horizontal-box">
+    <div name="lecture" class="horizontal-box">
 
         <div class="date-time-box">
             <div class="date-box">Чт,10</div>
@@ -152,19 +178,24 @@
         <div class="lecture-box">
             <div class="title-box">
                 <h2>
-                    Лекция 3. Мультимедиа: возможности браузера
+                    Лекция 6. Мультимедиа: возможности браузера
                 </h2>
             </div>
             <div class="author-box">
-                <span>Максим Васильев</span>
+                <span class="author-tip" name="author">Максим Васильев
+                    <span class="author-info"><h4>Максим Васильев</h4>
+                     Во фронтенд-разработке с 2007 года. До 2013-го, когда пришёл в Яндекс, работал технологом в студии Лебедева и других компаниях.</span>
+                </span>
             </div>
         </div>
-
+        <div class="school-box" name="school">
+            <div class="school-id interface">Школа разработки интерфейсов</div>
+        </div>
     </div>
 
     <div class="month-div"><span>June, 2017</span></div>
 
-    <div class="horizontal-box">
+    <div name="lecture" class="horizontal-box">
 
         <div class="date-time-box">
             <div class="date-box">Чт,10</div>
@@ -173,18 +204,48 @@
         <div class="lecture-box">
             <div class="title-box">
                 <h2>
-                    Лекция 3. Мультимедиа: возможности браузера
+                    Лекция 7. Java Blitz (Часть 1)
                 </h2>
             </div>
             <div class="author-box">
-                <span>Максим Васильев</span>
+                <span class="author-tip" name="author">Эдуард Мацуков
+                    <span class="author-info"><h4>Эдуард Мацуков</h4>
+                     Во фронтенд-разработке с 2007 года. До 2013-го, когда пришёл в Яндекс, работал технологом в студии Лебедева и других компаниях.</span>
+                </span>
             </div>
         </div>
+        <div class="school-box" name="school">
+            <div class="school-id interface">Школа мобильной разработки </div>
+        </div>
+    </div>
 
+    <div name="lecture" class="horizontal-box">
+
+        <div class="date-time-box">
+            <div class="date-box">Чт,10</div>
+            <div class="time-box">12:00</div>
+        </div>
+        <div class="lecture-box">
+            <div class="title-box">
+                <h2>
+                    Лекция 7. Java Blitz (Часть 2)
+                </h2>
+            </div>
+            <div class="author-box">
+                <span class="author-tip" name="author">Эдуард Мацуков
+                    <span class="author-info"><h4>Эдуард Мацуков</h4>
+                     Во фронтенд-разработке с 2007 года. До 2013-го, когда пришёл в Яндекс, работал технологом в студии Лебедева и других компаниях.</span>
+                </span>
+            </div>
+        </div>
+        <div class="school-box" name="school">
+            <div class="school-id interface">Школа мобильной разработки </div>
+        </div>
     </div>
 
 </div>
 
+<script src="js/data.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

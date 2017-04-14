@@ -87,6 +87,7 @@ div#container {
     background-color: white;
     border: 1px solid #dcdcdc;
     margin-bottom: 10px;
+    margin-top: 20px;
     padding: 10px;
     min-height: 120px;
 }
@@ -112,6 +113,7 @@ div#container {
     position: relative;
     cursor: help;
     white-space: nowrap;
+    margin-bottom: 5px;
 }
 
 .author-tip .author-info {
@@ -189,6 +191,7 @@ div#container {
 
 .school-box {
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
     font-size: 0.8125rem;
     margin: 30px 0 0 0;
@@ -198,20 +201,19 @@ div#container {
     width: 100%;
     border-radius: 5px;
     text-align: center;
-
 }
 
-.school1 {
+.interface {
     border: solid red;
     margin: 0 0 4px 0;
 }
 
-.school2 {
+.mobile {
     border: solid yellow;
     margin: 0 0 4px 0;
 }
 
-.school3 {
+.design {
     border: solid plum;
     margin: 0 0 4px 0;
 }
@@ -259,8 +261,6 @@ div#container {
     background-color: #111;
 }
 
-
-
 .details-box {
     display: flex;
     flex-direction: row;
@@ -298,5 +298,13 @@ div#container {
     height: 125px;
     display: block;
     vertical-align: middle;
+}
+
+.search{
+    max-width: 70%;
+    min-width: 360px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin:  auto;
 }
 
